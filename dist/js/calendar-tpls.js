@@ -508,6 +508,14 @@ angular.module('ui.rCalendar', ['ui.rCalendar.tpls'])
                         } else {
                             className = 'monthview-primary-with-event';
                         }
+                        for(var i=0; i<date.events.length; i++) {
+                            if(className) {
+                                className += ' ';
+                            }
+                            if(date.events[i].className) {
+                                className += date.events[i].className;
+                            }
+                        }
                     }
 
                     if (date.selected) {
